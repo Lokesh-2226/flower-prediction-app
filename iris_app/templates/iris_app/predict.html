@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Prediction</title>
+</head>
+<body>
+    <h2>Enter Iris Flower Dimensions</h2>
+    <form method="POST" action="/predict/">
+        {% csrf_token %}
+        <label>Sepal Length:</label>
+        <input type="text" name="sepal_length" required><br>
+        <label>Sepal Width:</label>
+        <input type="text" name="sepal_width" required><br>
+        <label>Petal Length:</label>
+        <input type="text" name="petal_length" required><br>
+        <label>Petal Width:</label>
+        <input type="text" name="petal_width" required><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
